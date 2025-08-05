@@ -1,0 +1,360 @@
+/* --- Color Variables --- */
+:root {
+    --color-bg-main: #fcfdfd;
+    --color-bg-header: hsl(222, 93%, 97%);
+    --color-bg-hero-fallback: hsl(222, 88%, 90%);
+    --color-bg-work-block: hsl(222, 100%, 97%);
+    --color-bg-secondary-btn: hsl(222, 75%, 87%);
+
+    --color-primary: hsl(0, 82%, 44%);
+    --color-secondary: hsl(222, 100%, 28%);
+    --color-secondary-hover: #457b9d;
+    --color-title: #cb1414;
+    --color-work-title: #264653;
+    --color-work-year: #6c757d;
+    --color-nav: #2a2a2a;
+
+    --color-text-main: #111418;
+    --color-text-btn: #fff;
+}
+
+/* --- Styles --- */
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+}
+
+.design-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.layout-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.header-container {
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: var(--color-bg-header);
+}
+
+.skip-link {
+    text-decoration: none;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logo-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 9999px;
+}
+
+.site-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+    color: var(--color-primary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav {
+    display: flex;
+    gap: 36px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-nav);
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+.primary-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text-btn);
+    padding: 0 16px;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--color-bg-main);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+}
+
+.secondary-button {
+    background-color: var(--color-bg-secondary-btn);
+    color: var(--color-text-main);
+    padding: 0 16px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 20px 160px;
+    flex: 1;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    min-height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-bg-hero-fallback);
+}
+
+
+.hero-text {
+    padding: 16px;
+    color: var(--color-text-btn);
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    width: 100%;
+    text-align: center;
+}
+
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+    padding: 24px 16px 12px;
+}
+
+.main-title {
+    font-size: 20px;
+}
+
+.primary-text {
+    color: var(--color-primary);
+}
+
+.center {
+    text-align: center;
+    padding: 12px 0;
+}
+
+.text-block {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 4px 16px 12px;
+}
+
+.work-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: var(--color-bg-work-block);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.work-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-work-title);
+}
+
+.work-year {
+    font-size: 0.875rem;
+    color: var(--color-work-year);
+    margin: 0;
+}
+
+.work-cover {
+    flex: 1;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0px 16px;
+}
+
+.contact-link {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #111418;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-link {
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    color: #f05454;
+}
+
+.open {
+    display: flex !important;
+    height: 100% !important;
+}
+
+.convocatoria-festival {
+  background: linear-gradient(135deg, #ffe9e3, #fff2f7);
+  border-left: 6px solid #d10024;
+  padding: 3rem 2rem;
+  margin: 4rem 0;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.festival-title {
+  font-size: 2rem;
+  color: #d10024;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.convocatoria-festival .text-block {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+    }
+
+    .header-left {
+        margin-bottom: 12px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    .header-right {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-right button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .content {
+        padding: 20px 20px;
+    }
+
+    .hero-text {
+        font-size: 24px;
+    }
+
+    .work-block {
+        flex-direction: column;
+    }
+
+    .work-cover {
+        width: 100%;
+        height: auto;
+    }
+
+    .convocatoria-festival {
+        padding: 2rem 1rem;
+    }
+    .festival-title {
+        font-size: 1.5rem;
+    }
+
+}
